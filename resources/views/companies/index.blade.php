@@ -5,6 +5,11 @@
             <h1>Companies</h1>
             <a href="{{ route('companies.create') }}" class="btn btn-primary">Add Company</a>
         </div>
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
         <table id="companies-table" class="display">
             <thead>
                 <tr>
